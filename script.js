@@ -1,21 +1,26 @@
-document.addEventListener('DOMContentLoaded', function () {
-    const target = document.getElementById('target');
-    const gameArea = document.getElementById('gameArea');
-    const gameAreaRect = gameArea.getBoundingClientRect();
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f5f5f5;
+}
 
-    target.addEventListener('click', function () {
-        alert('You clicked the target!');
-        moveTarget();
-    });
+#game-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
 
-    function moveTarget() {
-        const maxX = gameAreaRect.width - target.offsetWidth;
-        const maxY = gameAreaRect.height - target.offsetHeight;
-        const randomX = Math.floor(Math.random() * maxX);
-        const randomY = Math.floor(Math.random() * maxY);
-        target.style.left = randomX + 'px';
-        target.style.top = randomY + 'px';
-    }
+.game {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 20px;
+    width: 200px;
+    cursor: pointer;
+}
 
-    moveTarget();
-});
+.game:hover {
+    background-color: #e0e0e0;
+}
