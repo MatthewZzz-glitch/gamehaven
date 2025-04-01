@@ -1,1 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unblocked Games</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body> { font-family: Arial, sans-serif;
+    text-align: center;}
+h1 {
+    color: #007bff;
+}
+const games = [
+    { name: "Flappy Bird", url: "https://example.com/flappybird" },
+    { name: "Tetris", url: "https://example.com/tetris" }
+];
+    <h1>Welcome to Unblocked Games</h1>
+    <p>Select a game to play:</p>
+    <ul id="game-list"></ul>
+    <script src="script.js"></script>
+</body>
+</html>
 
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+h1 {
+    color: #007bff;
+}
+
+const games = [
+    { name: "Flappy Bird", url: "https://example.com/flappybird" },
+    { name: "Tetris", url: "https://example.com/tetris" }
+];
+
+const gameList = document.getElementById("game-list");
+games.forEach(game => {
+    const listItem = document.createElement("li");
+    const link = document.createElement("a");
+    link.href = game.url;
+    link.textContent = game.name;
+    listItem.appendChild(link);
+    gameList.appendChild(listItem);
+});
